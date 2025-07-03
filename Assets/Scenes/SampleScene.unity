@@ -565,10 +565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideImage: {fileID: 1498506096}
   slides:
-  - {fileID: 2800000, guid: 6b3187308c683a94a847415f2ab04376, type: 3}
-  - {fileID: 2800000, guid: 59b14cd03ff98704f9cbe5b8549e6bae, type: 3}
-  - {fileID: 2800000, guid: 1eecec649e56af74293d1799336d98e9, type: 3}
-  - {fileID: 2800000, guid: 85a6484e7630fc54eb2e0c965700f33f, type: 3}
+  - {fileID: 2800000, guid: 2ed0ff233704e6041b8fd5e0ffbb5128, type: 3}
+  - {fileID: 2800000, guid: f75954c6bd7597e41879ad49b01e01a6, type: 3}
+  - {fileID: 2800000, guid: 3ae7e3cef2b3bbc4c8dccf610d986222, type: 3}
+  - {fileID: 2800000, guid: 48af8b6637d0e5641a11bd8e660efc05, type: 3}
+  - {fileID: 2800000, guid: 367bef0af3675ce4cbcaf6f52c158d82, type: 3}
 --- !u!4 &1279818532
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 6b3187308c683a94a847415f2ab04376, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2ed0ff233704e6041b8fd5e0ffbb5128, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1074,7 +1075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16e92557b789eb440a9f2f1a2f3c19b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.935
+      value: -0.589
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16e92557b789eb440a9f2f1a2f3c19b1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1082,7 +1083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16e92557b789eb440a9f2f1a2f3c19b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.4584
+      value: 1.865
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 16e92557b789eb440a9f2f1a2f3c19b1, type: 3}
       propertyPath: m_LocalRotation.w
