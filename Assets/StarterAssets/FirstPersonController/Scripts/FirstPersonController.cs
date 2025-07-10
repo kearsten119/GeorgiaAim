@@ -48,7 +48,7 @@ namespace StarterAssets
 		public GameObject CinemachineCameraTarget;
 		[Tooltip("How far in degrees can you move the camera up")]
 		public float TopClamp = 90.0f;
-		[Tooltip("How far in degrees can you move the camera down")]
+		[Tooltip("How far in degrees can you the camera down")]
 		public float BottomClamp = -90.0f;
 
 		// cinemachine

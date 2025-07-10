@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SlideShow : MonoBehaviour
 {
-    public RawImage slideImage; //reference to your UI RawImage component
+    public RawImage slideImage; //reference to UI RawImage component
     public Texture[] slides;    //array of slide images
     private int currentIndex = 0;
 
@@ -52,5 +52,75 @@ public class SlideShow : MonoBehaviour
             currentIndex--;
             slideImage.texture = slides[currentIndex];
         }
+    }
+}
+*/
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
+
+public class SlideShow : MonoBehaviour
+{
+    public RawImage slideImage;        // Assign SlideImage here
+    public Texture[] slides;           // Your image slides
+    public RenderTexture videoTexture; // Assign VideoTexture here
+    public VideoPlayer videoPlayer;    // Assign VideoPlayer here
+    public int currentSlide = 0;
+
+    void Start()
+    {
+        ShowSlide(0);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N) && currentSlide < slides.Length)
+        {
+            NextSlide();
+        }
+        if (Input.GetKeyDown(KeyCode.P) && currentSlide > 0)
+        {
+            PrevSlide();
+        }
+    }
+
+    public void NextSlide()
+    {
+        if (currentSlide < slides.Length)
+        {
+            currentSlide++;
+            ShowSlide(currentSlide);
+        }
+    }
+
+    public void PrevSlide()
+    {
+        if (currentSlide > 0)
+        {
+            currentSlide--;
+            ShowSlide(currentSlide);
+        }
+    }
+
+    public void ShowSlide(int index)
+    {
+        // If it's the last slide, show the video
+        if (index == slides.Length)
+        {
+            slideImage.texture = videoTexture;
+            videoPlayer.gameObject.SetActive(true);
+            videoPlayer.frame = 0;
+            videoPlayer.Play();
+        }
+        else
+        {
+            slideImage.texture = slides[index];
+            videoPlayer.Stop();
+            videoPlayer.gameObject.SetActive(false);
+        }
+        currentSlide = Mathf.Clamp(index, 0, slides.Length);
     }
 }

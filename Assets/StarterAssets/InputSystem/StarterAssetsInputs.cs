@@ -45,11 +45,11 @@ namespace StarterAssets
 		}
 #endif
 
-
+		
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
-		} 
+		}
 
 		public void LookInput(Vector2 newLookDirection)
 		{
